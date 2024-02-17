@@ -1,0 +1,61 @@
+.grid-display {
+  border: 1px solid #ccc;
+  height: 100px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: 10px;
+
+}
+
+.boxes {
+  height: 130px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 5px solid black;
+}
+
+.boxes:hover {
+  color: white;
+}
+
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-black {
+  background-color: #000000 !important;
+  color: #ffffff;
+  cursor: text;
+}
+
+.bg-black::after {
+  content: "display is not Active";
+  height: 100%;
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+}
+
+.bg-success::after,.bg-danger::after  {
+  content: '';
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  height: 100%;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 20px solid #333;
+  z-index: -1;
+}
+
